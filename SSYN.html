@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+
+        <!-- 載入追蹤碼js -->
+        <script>
+            let cacheID = new Date().getMilliseconds();
+            let Login_InternalScript = document.createElement('script');
+            Login_InternalScript.src = `https://event.kgi.com.tw/news/event/commonResources/js/trackingCode.js?uid=` + cacheID;
+            document.head.appendChild(Login_InternalScript);
+        </script>
+
+        <!-- <link rel="preload" href="images/SSYN/reel2.webp" as="image" media="(min-width: 768px)" /> -->
+        <!-- <link rel="preload" href="images/SSYN/reel2.webp" as="image"/> -->
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#081c43" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="shortcut icon" href="images/SSYN/favicon.ico" />
+        <link href="https://www.kgi.com.tw/media/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+        <link href="https://www.kgi.com.tw/media/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+        <link href="https://www.kgi.com.tw/media/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+        <title>凱基證券 - 台股身份確認</title>
+        <meta property="og:title" content="凱基證券 - 台股身份確認" />
+        <meta name="twitter:title" content="凱基證券 - 台股客戶身份確認" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "name": "凱基證券",
+                "url": "https://www.kgi.com.tw/",
+                "logo": "https://www.kgi.com.tw/zh-tw/-/media/images/SSYN/kgis/header/logo-kgis.svg",
+                "mainEntityOfPage":{
+                    "@type": "WebPage",
+                    "@id": "https://event.kgi.com.tw/news/event/SSYN/index.html"
+                },
+                "image":[
+                    "https://event.kgi.com.tw/news/event/SSYN/images/SSYN/fb.jpg"
+                ]
+            }
+        </script>
+    
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org", 
+                "@type": "BreadcrumbList", 
+                "itemListElement": [{ 
+                    "@type": "ListItem", 
+                    "position": 1, 
+                    "item": " https://www.kgi.com.tw/", 
+                    "name": "首頁" 
+                } ,
+                { 
+                    "@type": "ListItem", 
+                    "position": 2, 
+                    "item": "https://event.kgi.com.tw/news/event/SSYN/index.html",
+                    "name": "凱基證券 - 台股客戶身份確認" 
+                } ]
+            }
+        </script>
+
+        <meta property="og:type" content="website" />
+        <!-- <meta property="fb:app_id" content="xxxxxxxx" /> -->
+        <meta name="description" content="台股客戶身份確認" />
+        <meta property="og:description" content="台股客戶身份確認" />
+        <meta name="twitter:description" content="台股客戶身份確認" />
+        <meta property="og:url" content="https://event.kgi.com.tw/news/event/SSYN/index.html" />
+        <link rel="canonical" href="https://event.kgi.com.tw/news/event/SSYN/index.html" />
+        <meta property="og:image" content="https://event.kgi.com.tw/news/event/SSYN/images/SSYN/fb.jpg" />
+        <meta name="twitter:image" content="https://event.kgi.com.tw/news/event/SSYN/images/SSYN/fb.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- <meta name="twitter:site" content="@" /> -->
+
+        <link rel="stylesheet" type="text/css" href="https://event.kgi.com.tw/news/event/commonResources/css/slick.css" />
+        <link href="https://event.kgi.com.tw/news/event/commonResources/css/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/SSYN-style.css?v=20250609" />
+
+        <!-- google font start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700,900&display=swap" rel="stylesheet"> -->
+        <!-- google font end -->
+
+        <script src="https://kit.fontawesome.com/2b08349a66.js" crossorigin="anonymous"></script>
+
+        <script src="https://event.kgi.com.tw/news/event/commonResources/js/vue-v3.js"></script>
+        <script src="https://event.kgi.com.tw/news/event/commonResources/js/jquery-v3.4.min.js"></script>
+        <script src="https://event.kgi.com.tw/news/event/commonResources/js/slick.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- <script src="https://event.kgi.com.tw/news/event/commonResources/js/httpVueLoader.js"></script> -->
+
+        <!-- 數字遞增動畫 -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script> -->
+
+        <!-- iOS 和 Android 的智能應用橫幅 -->
+        <!-- <meta name="apple-itunes-app" content="app-id=1473914290">
+        <meta name="google-play-app" content="app-id=tw.com.kgi.ecapp">
+        <link href="https://event.kgi.com.tw/news/event/commonResources/css/jquery.smartbanner.css" rel="stylesheet">
+        <script src="https://event.kgi.com.tw/news/event/commonResources/js/jquery.smartbanner.js"></script>
+        <script type="text/javascript">
+            $(function() { $.smartbanner() } )
+        </script>
+        <style>
+            #smartbanner {position: relative!important;} #smartbanner .sb-info > span:last-of-type {display: none;} #smartbanner.android .sb-button span {display: none;} #smartbanner.android {border-top-color: #005598;}
+            .sb-button:before {content: '打開'; display: block; line-height: 28px; background: #005598; color: #fff;}
+        </style> -->
+
+        <!-- scrollMagic + tweenMax -->
+        <script src="https://event.kgi.com.tw/news/event/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+        <script src="https://event.kgi.com.tw/news/event/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://event.kgi.com.tw/news/event/commonResources/js/animation.gsap.js"></script>
+
+        <!-- 加速網頁載入速度開源程式 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+                quicklink.listen();
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="app" v-cloak>
+
+            <div id="top"></div>
+            <div class="header clearfix">
+                <div class="header-logo">
+                    <a href="https://www.kgi.com.tw/zh-tw/" title="凱基證券" target="_blank">
+                        <img src="images/SSYN/logo.svg" alt="凱基證券">
+                    </a>
+                </div>
+            </div>
+
+            <!-- main -->
+            <article class="main">
+
+                <!-- <share-link></share-link> -->
+                <div class="entrance">
+                    <div class="container">
+                        <ul class="entrance-btn">
+                            <li>
+                                <a :href="windowWidth > 991 ? 'https://event.kgi.com.tw/news/event/appgotourl.html' : 'https://www.kgieworld.com.tw/ExternalFiles/mobile/WFLinkApp.aspx?Org=P&rUrl=kgiK&Data=QuoteList%3FAction%3D008'" title="已經是台股客戶">
+                                    我<b>已經是</b><br/>凱基證券台股客戶 <i class="fa-solid fa-right-to-bracket"></i>
+                                    <img src="images/SSYN/img4.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://eoa.kgi.com.tw/OOA/index.aspx?Source=E250601" title="還不是台股客戶">
+                                    我<b>還不是</b><br/>凱基證券台股客戶 <i class="fa-solid fa-angle-right"></i>
+                                    <img src="images/SSYN/img3.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="container clearfix">
+                    <div class="footer-content">
+                        <span class="footer-content-block">凱基證券股份有限公司</span>
+                        |
+                        <span class="footer-content-block">客服專線:(02)2389-0088 ‧ 0800-085-005</span>
+                        |
+                        <span class="footer-content-block">
+                            <a href="https://aiservice.kgieworld.com.tw/#/robotchat?platform=P" target="_blank" title="智能客服" class="linkText">
+                                智能客服
+                            </a>
+                        </span>
+                        <br />
+                        <span class="footer-content-block">地址：台北市明水路700號</span>
+                        |
+                        <span class="footer-content-block">電話：(02)2181-8888</span>
+                        |
+                        <span class="footer-content-block">112年金管證總字第0025號</span>
+                    </div>
+                    <ul class="footer-share">
+                        <li>
+                            <a href="https://lin.ee/9W1XQqi" target="_blank" title="凱基證券樂活投資人LINE官方帳號">
+                                <i class="fa-brands fa-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/KGISecurities" target="_blank" title="凱基證券樂活投資人Facebook">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/kgisecurities/" target="_blank" title="凱基證券樂活投資人ig">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/c/%E5%87%B1%E5%9F%BA%E6%A8%82%E6%B4%BB%E6%8A%95%E8%B3%87%E4%BA%BA" target="_blank" title="凱基證券樂活投資人youtube">
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+
+            <!-- fixedBtn -->
+            <div class="fixedBtn">
+                <ul>
+                    <li>
+                        <a href="https://eoa.kgi.com.tw/OOA/index.aspx?Source=E250601" title="開戶" target="_blank" id="AccountBtn">
+                            <img src="images/SSYN/open-account.svg" alt="開戶">
+                            開戶
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.kgieworld.com.tw/ExternalFiles/mobile/WFLinkApp.aspx?Org=P&rUrl=kgiP" title="交易" id="TradeBtn" :target="windowWidth > 991 ? '_blank' : ''">
+                            <img src="images/SSYN/trading.svg" alt="交易">
+                            交易
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://www.kgi.com.tw/zh-tw/lohas-mini-site" title="專家陪跑" target="_blank" id="ServiceBtn">
+                            <img src="https://www.kgi.com.tw/zh-tw/-/media/images/SSYN/kgis/sample-icons/nav_run.png" alt="專家陪跑">
+                            專家陪跑
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="https://www.kgi.com.tw/zh-tw/others/navigation" title="常用功能" target="_blank">
+                            <img src="https://www.kgi.com.tw/zh-tw/-/media/images/SSYN/kgis/homepage/0001/icon05.png" alt="常用功能">
+                            常用功能
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topBtn">
+                <a href="#top" title="返回最上面">
+                    <span>
+                        <i class="fas fa-caret-up"></i>
+                        TOP
+                    </span>
+                </a>
+            </div>
+
+            <!-- <modal ref="warning" :can-close="false" class="md">
+                <template #info>
+                    xxxx
+                </template>
+            </modal> -->
+
+            <modal ref="copyUrlSuccess" :can-close="true" class="md">
+                <template #info>
+                    <div class="tit-type1 margin-bottom-5 margin-top-15">
+                        <i class="fa-solid fa-circle-check text-green"></i>
+                    </div>
+                    <p class="text-center margin-top-5">
+                        <b>複製成功</b>
+                    </p>
+                </template>
+            </modal>
+                
+        </div>
+
+        <script src="js/main.min.js"></script>
+        
+    </body>
+</html>

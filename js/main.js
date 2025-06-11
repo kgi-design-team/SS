@@ -419,40 +419,14 @@ var content = new Vue({
 
         target8: '0',
 
-        qaActive: 1,
-
-        qa1_0: false,
-        qa1_1: false,
-        qa1_2: false,
-        qa1_3: false,
-        qa1_4: false,
-        qa1_5: false,
-        qa1_6: false,
-        qa1_7: false,
-        qa1_8: false,
-        qa1_9: false,
-
-        qa2_1: false,
-        qa2_2: false,
-        qa2_3: false,
-        qa2_4: false,
-        qa2_5: false,
-        qa2_6: false,
-        qa2_7: false,
-        qa2_8: false,
-        qa2_9: false,
-        qa2_10: false,
-        qa2_11: false,
-        qa2_12: false,
-
-        qa3_1: false,
-        qa3_2: false,
-        qa3_3: false,
-        qa3_4: false,
-        qa3_5: false,
-        qa3_6: false,
-        qa3_7: false,
-		
+data: {
+  qaActive: 1,
+  qa: {
+    1: [false, false, false],
+    2: [false, false, false],
+    3: [false, false, false],
+  }
+},
         note: false,
         notice: true,
         notice2: false,
@@ -1433,5 +1407,9 @@ var content = new Vue({
         },
     },
 });
+
+
+
+
 
 
