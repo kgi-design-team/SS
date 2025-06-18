@@ -98,23 +98,7 @@
         <script src="https://event.kgi.com.tw/news/event/commonResources/js/jquery-v3.4.min.js"></script>
         <script src="https://event.kgi.com.tw/news/event/commonResources/js/slick.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- <script src="https://event.kgi.com.tw/news/event/commonResources/js/httpVueLoader.js"></script> -->
-
-        <!-- 數字遞增動畫 -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script> -->
-
-        <!-- iOS 和 Android 的智能應用橫幅 -->
-        <!-- <meta name="apple-itunes-app" content="app-id=1473914290">
-        <meta name="google-play-app" content="app-id=tw.com.kgi.ecapp">
-        <link href="https://event.kgi.com.tw/news/event/commonResources/css/jquery.smartbanner.css" rel="stylesheet">
-        <script src="https://event.kgi.com.tw/news/event/commonResources/js/jquery.smartbanner.js"></script>
-        <script type="text/javascript">
-            $(function() { $.smartbanner() } )
-        </script>
-        <style>
-            #smartbanner {position: relative!important;} #smartbanner .sb-info > span:last-of-type {display: none;} #smartbanner.android .sb-button span {display: none;} #smartbanner.android {border-top-color: #005598;}
-            .sb-button:before {content: '打開'; display: block; line-height: 28px; background: #005598; color: #fff;}
-        </style> -->
+        
 
         <!-- scrollMagic + tweenMax -->
         <script src="https://event.kgi.com.tw/news/event/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
@@ -122,12 +106,45 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
         <script src="https://event.kgi.com.tw/news/event/commonResources/js/animation.gsap.js"></script>
 
+        <script src="js/blockUI.js"></script>
+
         <!-- 加速網頁載入速度開源程式 -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>        
         <script>
             window.addEventListener('load', () => {
                 quicklink.listen();
             });
+           
+
+            var isMobile = function() {
+                const userAgent = navigator.userAgent || navigator.vendor;
+                return /Mobile|Android|iP(hone|od|ad)/gi.test(userAgent) 
+            };
+
+
+            var kgiCustomerAction = function() {                
+                if(isMobile() == true) {
+                    location.href = " https://www.kgieworld.com.tw/ExternalFiles/mobile/WFLinkApp.aspx?Org=P&rUrl=kgiP&Data=Web%3FAction%3D100%26WebType%3D01";
+                }   
+                else {                    
+                    $.blockUI({
+                        message: $("#msg"),
+                        css: {
+                            "font-size": "12px",
+                            "top": "30%",
+                            "height": "50%"
+                        }                        
+                    })
+                }                             
+            };
+
+            var closeBlock = function() {
+                $.unblockUI(); 
+                return false; 
+            };
+
+           
+
         </script>
 
     </head>
@@ -153,13 +170,13 @@
                     <div class="container">
                         <ul class="entrance-btn">
                             <li>
-                                <a :href="windowWidth > 991 ? 'https://event.kgi.com.tw/news/event/appgotourl.html' : 'https://www.kgieworld.com.tw/ExternalFiles/mobile/WFLinkApp.aspx?Org=P&rUrl=kgiK&Data=QuoteList%3FAction%3D008'" title="已經是台股客戶">
+                                <a href="javascript:void(0)" onclick="kgiCustomerAction()" title="已經是台股客戶">
                                     我<b>已經是</b><br/>凱基證券台股客戶 <i class="fa-solid fa-right-to-bracket"></i>
                                     <img src="images/SSYN/img4.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://eoa.kgi.com.tw/OOA/index.aspx?Source=E250601" title="還不是台股客戶">
+                                <a href="https://eoa.kgi.com.tw/OOA/WFNewAcckind.aspx?Source=E250601" title="還不是台股客戶">
                                     我<b>還不是</b><br/>凱基證券台股客戶 <i class="fa-solid fa-angle-right"></i>
                                     <img src="images/SSYN/img3.png" alt="">
                                 </a>
@@ -238,7 +255,7 @@
                     </li> -->
                     <li>
                         <a href="https://www.kgi.com.tw/zh-tw/others/navigation" title="常用功能" target="_blank">
-                            <img src="https://www.kgi.com.tw/zh-tw/-/media/images/SSYN/kgis/homepage/0001/icon05.png" alt="常用功能">
+                            <img src="https://www.kgi.com.tw/zh-tw/-/media/images/kgis/homepage/0001/icon05.png" alt="常用功能">
                             常用功能
                         </a>
                     </li>
@@ -276,4 +293,10 @@
         <script src="js/main.min.js"></script>
         
     </body>
+
+    <div id="msg" style="display:none; cursor: default; "> 
+        <h1>快e抽功能尚未支援您的裝置，請用手機掃描以下QRCode，將會引導您開啟隨身e策略進行申購作業。</h1> 
+        <div><img src="./images/applyQRCode.png" style="width: 250px"/></div>        
+        <div><img src="./images/close.png" onclick="closeBlock()"/></div>
+    </div> 
 </html>
